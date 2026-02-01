@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "**/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "css/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "js/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "assets/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/services", "dest": "/services.html" },
+    { "src": "/process", "dest": "/process.html" },
+    { "src": "/portfolio", "dest": "/portfolio.html" },
+    { "src": "/contact", "dest": "/contact.html" },
+    { "src": "/pavers", "dest": "/pavers.html" },
+    { "src": "/pool-decks", "dest": "/pool-decks.html" },
+    { "src": "/turf", "dest": "/turf.html" },
+    { "src": "/screen-enclosures", "dest": "/screen-enclosures.html" }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}

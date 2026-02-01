@@ -1,0 +1,49 @@
+{
+  "navigation": [
+    {
+      "label": "Services",
+      "href": "/services",
+      "dropdown": true,
+      "categories": [
+        {
+          "title": "Hardscaping",
+          "items": [
+            { "label": "Pavers & Driveways", "href": "/pavers", "description": "Premium paver installations" },
+            { "label": "Pool Decks", "href": "/pool-decks", "description": "Waterfront & pool surfaces" }
+          ]
+        },
+        {
+          "title": "Outdoor Living",
+          "items": [
+            { "label": "Screen Enclosures", "href": "/screen-enclosures", "description": "3D design & full permits" },
+            { "label": "Artificial Turf", "href": "/turf", "description": "Premium synthetic grass" }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Process",
+      "href": "/process",
+      "dropdown": false
+    },
+    {
+      "label": "Portfolio",
+      "href": "/portfolio",
+      "dropdown": false
+    },
+    {
+      "label": "Contact",
+      "href": "/contact",
+      "dropdown": false
+    }
+  ],
+  "cta": {
+    "label": "Get Quote",
+    "href": "/contact"
+  },
+  "logo": {
+    "src": "/assets/images/logo_dark.png",
+    "alt": "Caviar Pavers",
+    "href": "/"
+  }
+}

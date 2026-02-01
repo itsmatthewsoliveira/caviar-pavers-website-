@@ -1,0 +1,134 @@
+:root {
+    /* --- Primary Colors --- */
+    --navy-dark: #1C263F;
+    --navy-darker: #070E2C;
+    --gold-primary: #FFBC0D;
+    --gold-secondary: #FABB18;
+
+    /* --- Secondary Colors --- */
+    --white: #FFFFFF;
+    --cream-light: #FFF2C8;
+    --cream-bg: #FAF9F5;
+    --text-navy: #1C263F;
+
+    /* --- Legacy Aliases (for compatibility) --- */
+    --color-primary-blue: #1C263F;
+    --color-accent-gold: #FFBC0D;
+    --color-white: #FFFFFF;
+    --color-off-white: #FAF9F5;
+    --color-text-dark: #1C263F;
+    --color-text-light: #FFFFFF;
+    --color-grey-light: #E5E7EB;
+
+    /* --- Typography --- */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* --- Spacing --- */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 8rem;
+    --spacing-container: 5%;
+
+    /* --- Border Radius --- */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-pill: 100px;
+
+    /* --- Transitions --- */
+    --transition-fast: 0.3s ease;
+}
+
+/* --- Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-navy);
+    background-color: var(--white);
+    line-height: 1.35;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--text-navy);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 43px;
+    letter-spacing: -2.15px;
+}
+
+h2 {
+    font-size: 35px;
+    letter-spacing: -1.75px;
+}
+
+h3 {
+    font-size: 24px;
+    letter-spacing: -1.2px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* --- Utilities --- */
+.container {
+    padding: 0 var(--spacing-container);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.text-gold {
+    color: var(--gold-primary);
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.text-navy {
+    color: var(--text-navy);
+}
+
+.bg-navy {
+    background-color: var(--navy-dark);
+}
+
+.bg-navy-dark {
+    background-color: var(--navy-darker);
+}
+
+.bg-cream {
+    background-color: var(--cream-bg);
+}
+
+/* Legacy utilities */
+.bg-blue {
+    background-color: var(--navy-dark);
+}

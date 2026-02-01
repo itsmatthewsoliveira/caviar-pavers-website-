@@ -1,0 +1,60 @@
+{
+  "brand": {
+    "name": "Caviar Pavers",
+    "tagline": "Elegance Meets Durability",
+    "phone": "904-749-5327",
+    "email": "contact@caviarpavers.com"
+  },
+  "services": {
+    "hardscaping": [
+      {
+        "title": "Paver Patios",
+        "description": "Revamp your patio with expert design and durable, stylish materials that extend your living space."
+      },
+      {
+        "title": "Pool Decks",
+        "description": "Exquisite pool deck pavers that seamlessly blend durability, elegance, and safety."
+      },
+      {
+        "title": "Walkways & Driveways",
+        "description": "Elevate your property’s entrance with superior paver solutions."
+      }
+    ],
+    "outdoorFeatures": [
+      {
+        "title": "Artificial Turf",
+        "description": "Lush, green solutions for low-maintenance beauty year-round."
+      },
+      {
+        "title": "Screen Enclosures",
+        "description": "Premium enclosures that offer comfort without compromising the view."
+      },
+      {
+        "title": "Outdoor Kitchens",
+        "description": "Transforming your backyard into a culinary paradise for entertaining."
+      }
+    ]
+  },
+  "process": [
+    {
+      "step": 1,
+      "name": "Discovery",
+      "description": "We delve deep into your vision, needs, and aspirations."
+    },
+    {
+      "step": 2,
+      "name": "Design",
+      "description": "From concept sketches to comprehensive plans."
+    },
+    {
+      "step": 3,
+      "name": "Demo & Prep",
+      "description": "We handle the heavy lifting to prepare your space."
+    },
+    {
+      "step": 4,
+      "name": "Construction",
+      "description": "Expert installation with unparalleled craftsmanship."
+    }
+  ]
+}
