@@ -1,34 +1,22 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "**/*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "css/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "js/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "assets/**",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    { "src": "/", "dest": "/index.html" },
-    { "src": "/services", "dest": "/services.html" },
-    { "src": "/process", "dest": "/process.html" },
-    { "src": "/portfolio", "dest": "/portfolio.html" },
-    { "src": "/contact", "dest": "/contact.html" },
-    { "src": "/pavers", "dest": "/pavers.html" },
-    { "src": "/pool-decks", "dest": "/pool-decks.html" },
-    { "src": "/turf", "dest": "/turf.html" },
-    { "src": "/screen-enclosures", "dest": "/screen-enclosures.html" }
-  ],
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/services", "destination": "/services.html" },
+    { "source": "/process", "destination": "/process.html" },
+    { "source": "/portfolio", "destination": "/portfolio.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/pavers", "destination": "/pavers.html" },
+    { "source": "/pool-decks", "destination": "/pool-decks.html" },
+    { "source": "/turf", "destination": "/turf.html" },
+    { "source": "/screen-enclosures", "destination": "/screen-enclosures.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    }
+  ]
 }
