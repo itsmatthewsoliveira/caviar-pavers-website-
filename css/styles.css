@@ -197,6 +197,119 @@
     padding: 0 var(--spacing-md);
 }
 
+/* Hero Split Layout */
+.hero-split-container {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+.hero-content-left {
+    text-align: left;
+    max-width: none;
+    padding: 0;
+}
+
+.hero-content-left .hero-badges {
+    justify-content: flex-start;
+}
+
+/* Hero Glassmorphism Form */
+.hero-form-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-form-glass {
+    background: rgba(28, 38, 63, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.hero-form-title {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+    letter-spacing: -1px;
+}
+
+.hero-form-subtitle {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 24px;
+}
+
+.hero-quote-form .hero-form-group {
+    margin-bottom: 16px;
+}
+
+.hero-quote-form input,
+.hero-quote-form select,
+.hero-quote-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.hero-quote-form input::placeholder,
+.hero-quote-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-quote-form select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ffffff' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+}
+
+.hero-quote-form select option {
+    background: var(--navy-dark);
+    color: var(--white);
+}
+
+.hero-quote-form input:focus,
+.hero-quote-form select:focus,
+.hero-quote-form textarea:focus {
+    outline: none;
+    border-color: var(--gold-primary);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.hero-quote-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.hero-form-btn {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
 .hero-title {
     font-family: var(--font-heading);
     font-size: 43px;
@@ -729,6 +842,22 @@ textarea.form-input {
     }
 }
 
+@media (max-width: 1024px) {
+    .hero-split-container {
+        gap: 40px;
+        padding: 0 24px;
+    }
+
+    .hero-form-glass {
+        padding: 30px;
+        max-width: 380px;
+    }
+
+    .hero-form-title {
+        font-size: 22px;
+    }
+}
+
 @media (max-width: 768px) {
     .header {
         padding: 15px 0;
@@ -762,8 +891,31 @@ textarea.form-input {
     }
 
     .hero {
-        min-height: 80vh;
-        padding-top: 80px;
+        min-height: auto;
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+
+    .hero-split-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .hero-content-left {
+        text-align: center;
+    }
+
+    .hero-content-left .hero-badges {
+        justify-content: center;
+    }
+
+    .hero-form-container {
+        justify-content: center;
+    }
+
+    .hero-form-glass {
+        max-width: 100%;
     }
 
     .hero-title {
@@ -1222,6 +1374,11 @@ textarea.form-input {
 
 .hero .btn-primary {
     animation: fadeInUp 1s ease-out 0.4s forwards;
+    opacity: 0;
+}
+
+.hero-form-glass {
+    animation: fadeInRight 1s ease-out 0.3s forwards;
     opacity: 0;
 }
 
