@@ -10,7 +10,7 @@
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: var(--white);
+    background-color: var(--navy-dark);
     padding: 20px 0;
     min-height: 100px;
 }
@@ -36,7 +36,7 @@
     font-family: var(--font-body);
     font-size: 16px;
     font-weight: 600;
-    color: var(--text-navy);
+    color: var(--white);
     transition: color 0.3s ease;
 }
 
@@ -346,10 +346,14 @@
 /* --- Section Layouts --- */
 .section {
     padding: 80px 0;
+    background-color: var(--navy-light);
+    color: var(--white);
+    position: relative;
 }
 
 .section-light {
     background-color: var(--cream-bg);
+    color: var(--text-navy);
 }
 
 .section-dark {
@@ -391,6 +395,10 @@
     font-weight: 700;
     letter-spacing: -1.75px;
     margin-bottom: var(--spacing-sm);
+    color: var(--white);
+}
+
+.section-light .section-header h2 {
     color: var(--text-navy);
 }
 
@@ -399,10 +407,14 @@
 }
 
 .section-body {
-    color: #555;
+    color: rgba(255, 255, 255, 0.85);
     margin-bottom: var(--spacing-md);
     max-width: 500px;
     line-height: 1.6;
+}
+
+.section-light .section-body {
+    color: #555;
 }
 
 .section-dark .section-body {
@@ -605,6 +617,28 @@ textarea.form-input {
     bottom: 0;
     pointer-events: none;
     z-index: 0;
+}
+
+/* Auto pattern for sections */
+.section::before {
+    content: '';
+    background-image: url('../assets/images/pattern_gold.png');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 200px;
+    opacity: 0.03;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.section > * {
+    position: relative;
+    z-index: 1;
 }
 
 /* --- Footer --- */
@@ -1005,7 +1039,7 @@ textarea.form-input {
 
 /* --- Stats Section --- */
 .stats-section {
-    background: var(--cream-bg);
+    background: var(--navy-light);
     padding: 60px 0;
 }
 
@@ -1033,7 +1067,7 @@ textarea.form-input {
 .stat-label {
     font-size: 16px;
     font-weight: 500;
-    color: var(--text-navy);
+    color: var(--white);
 }
 
 /* --- Featured Project --- */
@@ -1128,10 +1162,12 @@ textarea.form-input {
 /* --- Alternating Content Sections --- */
 .content-block {
     padding: 80px 0;
+    background: var(--navy-light);
+    color: var(--white);
 }
 
 .content-block:nth-child(even) {
-    background: var(--cream-bg);
+    background: var(--navy-dark);
 }
 
 .content-block .split-layout:nth-child(even) {
@@ -1155,6 +1191,10 @@ textarea.form-input {
     gap: 12px;
     margin-bottom: 16px;
     font-size: 16px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.section-light .feature-list li {
     color: #555;
 }
 

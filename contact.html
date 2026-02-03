@@ -60,41 +60,34 @@
         <div class="container split-layout">
             <div class="text-content">
                 <div class="section-counter">04</div>
-                <h1>Get In Touch.</h1>
-                <p>Ready to transform your outdoor space? Fill out the form, or give us a call to schedule your free
+                <h1 style="color: var(--white);">Get In Touch.</h1>
+                <p style="color: rgba(255,255,255,0.85);">Ready to transform your outdoor space? Fill out the form, or give us a call to schedule your free
                     consultation.</p>
 
                 <div style="margin-top: 2rem;">
-                    <h3>Contact Info</h3>
-                    <p><strong>Phone:</strong> 904-749-5327</p>
-                    <p><strong>Email:</strong> contact@caviarpavers.com</p>
-                    <p><strong>Serving:</strong> Jacksonville & Northeast Florida</p>
+                    <h3 style="color: var(--gold-primary);">Contact Info</h3>
+                    <p style="color: rgba(255,255,255,0.85);"><strong>Phone:</strong> 904-749-5327</p>
+                    <p style="color: rgba(255,255,255,0.85);"><strong>Email:</strong> contact@caviarpavers.com</p>
+                    <p style="color: rgba(255,255,255,0.85);"><strong>Serving:</strong> Jacksonville & Northeast Florida</p>
                 </div>
             </div>
 
-            <!-- Contact Form Block -->
-            <div class="contact-form-block"
-                style="background: #F4F6F8; padding: 3rem; border-radius: 8px; border: 1px solid #E2E8F0;">
-                <form>
-                    <div style="margin-bottom: 1rem;">
-                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Name</label>
-                        <input type="text"
-                            style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px;" required>
+            <!-- Contact Form Block - Glassmorphism -->
+            <div class="hero-form-glass">
+                <h3 class="hero-form-title">Send Us a Message</h3>
+                <form class="hero-quote-form">
+                    <div class="hero-form-group">
+                        <input type="text" placeholder="Name" required>
                     </div>
-                    <div style="margin-bottom: 1rem;">
-                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Phone</label>
-                        <input type="tel"
-                            style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px;" required>
+                    <div class="hero-form-group">
+                        <input type="tel" placeholder="Phone" required>
                     </div>
-                    <div style="margin-bottom: 1rem;">
-                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email</label>
-                        <input type="email"
-                            style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px;" required>
+                    <div class="hero-form-group">
+                        <input type="email" placeholder="Email" required>
                     </div>
-                    <div style="margin-bottom: 1rem;">
-                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Service Interested
-                            In</label>
-                        <select style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px;">
+                    <div class="hero-form-group">
+                        <select required>
+                            <option value="" disabled selected>Service Interested In</option>
                             <option>Paver Patio</option>
                             <option>Pool Deck</option>
                             <option>Driveway</option>
@@ -103,12 +96,10 @@
                             <option>Outdoor Kitchen</option>
                         </select>
                     </div>
-                    <div style="margin-bottom: 1rem;">
-                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Message</label>
-                        <textarea style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px;"
-                            rows="4"></textarea>
+                    <div class="hero-form-group">
+                        <textarea placeholder="Message" rows="4"></textarea>
                     </div>
-                    <button type="submit" class="btn-primary" style="width: 100%;">Send Request</button>
+                    <button type="submit" class="btn-primary hero-form-btn">Send Request</button>
                 </form>
             </div>
         </div>
