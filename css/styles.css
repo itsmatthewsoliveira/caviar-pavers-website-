@@ -77,58 +77,66 @@
 
 /* --- Buttons --- */
 .btn-primary {
-    background-color: var(--gold-primary);
-    color: var(--white);
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-dark) 100%);
+    color: var(--navy-darker);
     font-family: var(--font-body);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     padding: 14.4px 26px;
     border-radius: var(--radius-pill);
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
     display: inline-block;
     text-align: center;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
 }
 
 .btn-primary:hover {
-    background-color: var(--gold-secondary);
-    color: var(--white);
+    background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-secondary) 50%, var(--gold-dark) 100%);
+    color: var(--navy-darker);
+    box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+    transform: translateY(-2px);
 }
 
 .btn-submit {
-    background-color: var(--gold-secondary);
-    color: var(--white);
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-dark) 100%);
+    color: var(--navy-darker);
     font-family: var(--font-body);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     padding: 18px 26px;
     border-radius: var(--radius-sm);
     border: none;
     width: 100%;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
 .btn-submit:hover {
-    background-color: var(--gold-primary);
+    box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+    transform: translateY(-2px);
 }
 
 .btn-cta-wide {
-    background-color: var(--gold-secondary);
-    color: var(--white);
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-dark) 100%);
+    color: var(--navy-darker);
     font-family: var(--font-body);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     padding: 16px 80px;
     border-radius: var(--radius-sm);
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
 .btn-cta-wide:hover {
-    background-color: var(--gold-primary);
+    box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+    transform: translateY(-2px);
 }
 
 /* Glassmorphism Button */
@@ -253,22 +261,25 @@
 }
 
 .hero-form-glass {
-    background: rgba(28, 38, 63, 0.75);
+    background: rgba(15, 23, 42, 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.2);
     border-radius: 20px;
     padding: 40px;
     width: 100%;
     max-width: 420px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 40px rgba(212, 175, 55, 0.05);
 }
 
 .hero-form-title {
     font-family: var(--font-heading);
     font-size: 24px;
     font-weight: 700;
-    color: var(--white);
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 8px;
     letter-spacing: -1px;
 }
@@ -311,7 +322,7 @@
 }
 
 .hero-quote-form select option {
-    background: var(--navy-dark);
+    background: var(--navy-darker);
     color: var(--white);
 }
 
@@ -321,6 +332,7 @@
     outline: none;
     border-color: var(--gold-primary);
     background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
 }
 
 .hero-quote-form textarea {
@@ -417,8 +429,11 @@
     font-family: var(--font-heading);
     font-size: 72px;
     font-weight: 700;
-    color: var(--gold-primary);
-    opacity: 0.2;
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0.25;
     line-height: 1;
     margin-bottom: var(--spacing-sm);
 }
@@ -587,7 +602,10 @@
     font-size: 24px;
     font-weight: 700;
     letter-spacing: -1.2px;
-    color: var(--gold-primary);
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: var(--spacing-sm);
 }
 
@@ -743,7 +761,10 @@ textarea.form-input {
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--gold-primary);
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     letter-spacing: 3px;
     margin: var(--spacing-md) 0;
 }
@@ -809,7 +830,10 @@ textarea.form-input {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--gold-primary);
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 12px;
     padding-bottom: 8px;
     border-bottom: 1px solid var(--color-grey-light);
@@ -921,7 +945,10 @@ textarea.form-input {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--gold-primary);
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 8px;
 }
 
@@ -1105,12 +1132,12 @@ textarea.form-input {
     display: flex;
     align-items: center;
     gap: 8px;
-    background: rgba(28, 38, 63, 0.6);
+    background: rgba(15, 23, 42, 0.7);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding: 12px 24px;
     border-radius: var(--radius-pill);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.2);
     color: var(--white);
     font-size: 14px;
     font-weight: 500;
@@ -1118,12 +1145,16 @@ textarea.form-input {
 }
 
 .hero-badge:hover {
-    background: rgba(28, 38, 63, 0.8);
+    background: rgba(15, 23, 42, 0.85);
     border-color: var(--gold-primary);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
 }
 
 .hero-badge-icon {
-    color: var(--gold-primary);
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-size: 18px;
 }
 
@@ -1159,7 +1190,10 @@ textarea.form-input {
     font-family: var(--font-heading);
     font-size: 48px;
     font-weight: 700;
-    color: var(--gold-primary);
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     letter-spacing: -2px;
     line-height: 1;
     margin-bottom: 8px;
@@ -1208,7 +1242,10 @@ textarea.form-input {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--gold-primary);
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 16px;
 }
 
@@ -1222,7 +1259,10 @@ textarea.form-input {
 .featured-project-stat {
     font-size: 60px;
     font-weight: 700;
-    color: var(--gold-primary);
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     line-height: 1;
     margin-bottom: 8px;
 }
@@ -1242,7 +1282,18 @@ textarea.form-input {
 /* --- Emphasis Text (Italic Style) --- */
 .text-emphasis {
     font-style: italic;
-    color: var(--gold-primary);
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Metallic Gold Text */
+.text-gold-metallic {
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /* --- Service Page Hero --- */
@@ -1317,12 +1368,13 @@ textarea.form-input {
     justify-content: center;
     width: 24px;
     height: 24px;
-    background: var(--gold-primary);
-    color: var(--white);
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-dark) 100%);
+    color: var(--navy-darker);
     border-radius: 50%;
     font-size: 12px;
     font-weight: 700;
     flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
 }
 
 /* --- CTA Banner --- */

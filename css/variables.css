@@ -1,16 +1,18 @@
 :root {
-    /* --- Primary Colors --- */
-    --navy-dark: #1C263F;
-    --navy-darker: #070E2C;
-    --gold-primary: #FFBC0D;
-    --gold-secondary: #FABB18;
+    /* --- Primary Colors (Premium Dark) --- */
+    --navy-dark: #0F172A;
+    --navy-darker: #020617;
+    --navy-medium: #1E293B;
+    --gold-primary: #D4AF37;
+    --gold-secondary: #C9A227;
+    --gold-light: #E5C158;
+    --gold-dark: #B8960F;
 
     /* --- Secondary Colors --- */
     --white: #FFFFFF;
-    --cream-light: #FFF2C8;
-    --cream-bg: #F0EDE6;
-    --navy-light: #2A3654;
-    --text-navy: #1C263F;
+    --cream-light: #FDF6E3;
+    --cream-bg: #F8F6F0;
+    --text-navy: #0F172A;
 
     /* --- Legacy Aliases (for compatibility) --- */
     --color-primary-blue: #1C263F;
