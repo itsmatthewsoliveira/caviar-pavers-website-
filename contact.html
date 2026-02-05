@@ -80,21 +80,21 @@
             <!-- Contact Form Block - Glassmorphism -->
             <div class="hero-form-glass">
                 <h3 class="hero-form-title">Send Us a Message</h3>
-                <form class="hero-quote-form">
+                <form class="hero-quote-form" data-page="contact">
                     <div class="hero-form-group">
-                        <input type="text" placeholder="Name" required>
+                        <input type="text" name="name" placeholder="Name" required>
                     </div>
                     <div class="hero-form-group">
-                        <input type="tel" placeholder="Phone" required>
+                        <input type="tel" name="phone" placeholder="Phone" required>
                     </div>
                     <div class="hero-form-group">
-                        <input type="email" placeholder="Email" required>
+                        <input type="email" name="email" placeholder="Email" required>
                     </div>
                     <div class="hero-form-group">
-                        <input type="text" placeholder="Project Address" required>
+                        <input type="text" name="project_address" placeholder="Project Address" required>
                     </div>
                     <div class="hero-form-group">
-                        <select required>
+                        <select name="service" required>
                             <option value="" disabled selected>Service Interested In</option>
                             <option>Paver Patio</option>
                             <option>Pool Deck</option>
@@ -105,7 +105,7 @@
                         </select>
                     </div>
                     <div class="hero-form-group">
-                        <textarea placeholder="Message" rows="4"></textarea>
+                        <textarea name="message" placeholder="Message" rows="4"></textarea>
                     </div>
                     <button type="submit" class="btn-primary hero-form-btn">Send Request</button>
                 </form>

@@ -35,24 +35,59 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Form Handling (Prevent Default for Demo)
-    const forms = document.querySelectorAll('form');
+    // Supabase Form Handling
+    const SUPABASE_URL = 'https://hudkpjkntmemerjuaffj.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh1ZGtwamtudG1lbWVyanVhZmZqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAzMDg0NDYsImV4cCI6MjA4NTg4NDQ0Nn0.PXX9qgJ0aiBGhW4j8TrI6Kiw_ISo-QcBGifYb1OdOYE';
+
+    const forms = document.querySelectorAll('.hero-quote-form');
     forms.forEach(form => {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = form.querySelector('button');
             const originalText = btn.innerText;
 
-            btn.innerText = 'Sent!';
-            btn.style.backgroundColor = '#28a745';
+            btn.innerText = 'Sending...';
+            btn.disabled = true;
+
+            const lead = {
+                name: form.querySelector('[name="name"]').value,
+                phone: form.querySelector('[name="phone"]').value,
+                email: form.querySelector('[name="email"]').value,
+                project_address: form.querySelector('[name="project_address"]').value,
+                service: form.querySelector('[name="service"]').value,
+                message: form.querySelector('[name="message"]').value,
+                page_source: form.getAttribute('data-page') || 'unknown'
+            };
+
+            try {
+                const res = await fetch(`${SUPABASE_URL}/rest/v1/leads`, {
+                    method: 'POST',
+                    headers: {
+                        'apikey': SUPABASE_ANON_KEY,
+                        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                        'Content-Type': 'application/json',
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify(lead)
+                });
+
+                if (res.ok) {
+                    btn.innerText = 'Sent!';
+                    btn.style.backgroundColor = '#28a745';
+                    form.reset();
+                } else {
+                    throw new Error('Submission failed');
+                }
+            } catch (err) {
+                btn.innerText = 'Error - Try Again';
+                btn.style.backgroundColor = '#dc3545';
+            }
 
             setTimeout(() => {
-                form.reset();
                 btn.innerText = originalText;
                 btn.style.backgroundColor = '';
+                btn.disabled = false;
             }, 3000);
-
-            alert('Thank you! This is a demo form. In a live site, this would send an email.');
         });
     });
 
