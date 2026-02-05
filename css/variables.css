@@ -61,8 +61,8 @@ body {
     font-family: var(--font-body);
     font-size: 15px;
     font-weight: 400;
-    color: var(--text-navy);
-    background-color: var(--white);
+    color: var(--white);
+    background-color: var(--navy-dark);
     line-height: 1.35;
     overflow-x: hidden;
 }
@@ -74,7 +74,7 @@ h4,
 h5,
 h6 {
     font-family: var(--font-heading);
-    color: var(--text-navy);
+    color: var(--white);
     font-weight: 700;
     line-height: 1.2;
 }
@@ -135,6 +135,45 @@ img {
 
 .bg-cream {
     background-color: var(--cream-bg);
+}
+
+/* --- Mobile Typography Overrides --- */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 32px;
+        letter-spacing: -1.5px;
+    }
+
+    h2 {
+        font-size: 26px;
+        letter-spacing: -1.2px;
+    }
+
+    h3 {
+        font-size: 20px;
+        letter-spacing: -0.8px;
+    }
+
+    .container {
+        padding: 0 4%;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+        letter-spacing: -1.8px;
+    }
+
+    h2 {
+        font-size: 30px;
+        letter-spacing: -1.5px;
+    }
+
+    h3 {
+        font-size: 22px;
+        letter-spacing: -1px;
+    }
 }
 
 /* Legacy utilities */

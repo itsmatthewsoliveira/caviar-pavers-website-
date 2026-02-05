@@ -24,9 +24,8 @@
             <div class="logo">
                 <a href="/"><img src="/assets/images/logo_dark.png" alt="Caviar Pavers"></a>
             </div>
-
-            <!-- Desktop Navigation -->
             <nav class="nav-links">
+                <a href="/" class="nav-link active">Home</a>
                 <div class="nav-item">
                     <a href="/services" class="nav-link">Services <span class="dropdown-arrow">▼</span></a>
                     <div class="dropdown-menu">
@@ -57,15 +56,19 @@
                 <a href="/process" class="nav-link">Process</a>
                 <a href="/portfolio" class="nav-link">Portfolio</a>
             </nav>
-
-            <a href="/contact" class="btn-primary">Get Quote</a>
+            <div class="header-right">
+                <a href="tel:904-749-5327" class="header-phone">
+                    <span class="header-phone-icon">&#9742;</span>
+                    <span>904-749-5327</span>
+                </a>
+                <a href="/contact" class="btn-primary">Get Quote</a>
+            </div>
             <button class="mobile-menu-btn" aria-label="Open Menu">☰</button>
         </div>
     </header>
-
-    <!-- Mobile Menu -->
     <div class="mobile-menu">
         <button class="mobile-menu-close" aria-label="Close Menu">✕</button>
+        <div class="mobile-nav-item"><a href="/" class="mobile-nav-link">Home</a></div>
         <div class="mobile-nav-item">
             <a href="#" class="mobile-nav-link" data-dropdown>Services <span class="dropdown-arrow">▼</span></a>
             <div class="mobile-dropdown">
@@ -84,7 +87,12 @@
         <div class="mobile-nav-item"><a href="/process" class="mobile-nav-link">Process</a></div>
         <div class="mobile-nav-item"><a href="/portfolio" class="mobile-nav-link">Portfolio</a></div>
         <div class="mobile-nav-item"><a href="/contact" class="mobile-nav-link">Contact</a></div>
-        <div style="margin-top: 24px;"><a href="/contact" class="btn-primary" style="display: block; text-align: center;">Get Quote</a></div>
+        <div class="mobile-nav-item">
+            <a href="tel:904-749-5327" class="mobile-phone-link">&#9742; 904-749-5327</a>
+        </div>
+        <div style="margin-top: 24px;">
+            <a href="/contact" class="btn-primary" style="display: block; text-align: center;">Get Quote</a>
+        </div>
     </div>
 
     <!-- Hero Section with Video Background -->
@@ -98,7 +106,7 @@
                 title="Caviar Pavers Drone Footage"
             ></iframe>
         </div>
-        <script src="https://player.vimeo.com/api/player.js"></script>
+        <script src="https://player.vimeo.com/api/player.js" defer></script>
         <div class="hero-overlay"></div>
 
         <div class="hero-split-container">
@@ -139,6 +147,9 @@
                             <input type="email" placeholder="Email" required>
                         </div>
                         <div class="hero-form-group">
+                            <input type="text" placeholder="Project Address" required>
+                        </div>
+                        <div class="hero-form-group">
                             <select required>
                                 <option value="" disabled selected>Service Interested In</option>
                                 <option>Paver Patio</option>
@@ -160,10 +171,9 @@
     </section>
 
     <!-- Section 01: Narrative (Design with Elegance) -->
-    <section class="section section-light">
+    <section class="section section-alt">
         <div class="container split-layout">
             <div class="text-content">
-                <div class="section-counter" style="color: var(--navy-dark); opacity: 0.15;">01</div>
                 <div class="section-header">
                     <h2>Design with Elegance.<br>Build with Strength.</h2>
                 </div>
@@ -176,8 +186,8 @@
             </div>
             <div class="image-stagger-grid">
                 <!-- Placeholders: Use generated images or stock later -->
-                <img src="https://placehold.co/600x800/1C263F/FFBC0D?text=Paver+Driveway" alt="Modern Paver Driveway">
-                <img src="https://placehold.co/600x800/FFBC0D/1C263F?text=Luxury+Pool+Deck" alt="Luxury Pool Deck">
+                <img src="/assets/images/home/home-paver-driveway.jpg" alt="Modern Paver Driveway">
+                <img src="/assets/images/home/home-pool-deck.jpg" alt="Luxury Pool Deck">
             </div>
         </div>
     </section>
@@ -185,7 +195,6 @@
     <!-- Section 02: Services (Dark Section) -->
     <section class="section services-section" id="services">
         <div class="container">
-            <div class="section-counter text-white">02</div>
             <h2 class="text-white">Our Expertise</h2>
 
             <div class="service-grid">
@@ -225,7 +234,6 @@
     <section class="section" id="process">
         <div class="container">
             <div class="text-center" style="max-width: 600px; margin: 0 auto 60px;">
-                <div class="section-counter">03</div>
                 <h2 class="text-white">Our Process</h2>
                 <p style="color: rgba(255,255,255,0.7);">From first call to final walkthrough, we make every step simple and transparent.</p>
             </div>
@@ -258,11 +266,10 @@
     <!-- Section 04: Why Choose Us -->
     <section class="section">
         <div class="container split-layout">
-            <div class="image-content">
-                <img src="https://placehold.co/800x600/0F172A/CD7F32?text=Craftsmanship" alt="Craftsmanship" id="img-craftsmanship">
+            <div class="image-content" style="overflow: hidden;">
+                <img src="/assets/images/home/hero-home.jpg" alt="Craftsmanship" id="img-craftsmanship" style="object-fit: cover; object-position: center top; margin-bottom: -5%;">
             </div>
             <div class="text-content">
-                <div class="section-counter">04</div>
                 <div class="section-header">
                     <h2>Why Choose<br><span class="text-emphasis">Caviar Pavers?</span></h2>
                 </div>
@@ -283,7 +290,6 @@
     <section class="section" id="faq">
         <div class="container">
             <div class="text-center" style="max-width: 600px; margin: 0 auto 60px;">
-                <div class="section-counter">05</div>
                 <h2 class="text-white">Frequently Asked Questions</h2>
             </div>
 

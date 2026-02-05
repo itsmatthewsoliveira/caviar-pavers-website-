@@ -20,6 +20,7 @@
                 <a href="/"><img src="/assets/images/logo_dark.png" alt="Caviar Pavers"></a>
             </div>
             <nav class="nav-links">
+                <a href="/" class="nav-link">Home</a>
                 <div class="nav-item">
                     <a href="/services" class="nav-link">Services <span class="dropdown-arrow">▼</span></a>
                     <div class="dropdown-menu">
@@ -38,12 +39,16 @@
                 <a href="/process" class="nav-link">Process</a>
                 <a href="/portfolio" class="nav-link active">Portfolio</a>
             </nav>
-            <a href="/contact" class="btn-primary">Get Quote</a>
+            <div class="header-right">
+                <a href="tel:904-749-5327" class="header-phone"><span class="header-phone-icon">&#9742;</span><span>904-749-5327</span></a>
+                <a href="/contact" class="btn-primary">Get Quote</a>
+            </div>
             <button class="mobile-menu-btn" aria-label="Open Menu">☰</button>
         </div>
     </header>
     <div class="mobile-menu">
         <button class="mobile-menu-close" aria-label="Close Menu">✕</button>
+        <div class="mobile-nav-item"><a href="/" class="mobile-nav-link">Home</a></div>
         <div class="mobile-nav-item"><a href="#" class="mobile-nav-link" data-dropdown>Services <span class="dropdown-arrow">▼</span></a>
             <div class="mobile-dropdown">
                 <div class="mobile-dropdown-category"><div class="mobile-dropdown-title">Hardscaping</div><a href="/pavers" class="mobile-dropdown-item">Pavers & Driveways</a><a href="/pool-decks" class="mobile-dropdown-item">Pool Decks</a></div>
@@ -53,46 +58,128 @@
         <div class="mobile-nav-item"><a href="/process" class="mobile-nav-link">Process</a></div>
         <div class="mobile-nav-item"><a href="/portfolio" class="mobile-nav-link">Portfolio</a></div>
         <div class="mobile-nav-item"><a href="/contact" class="mobile-nav-link">Contact</a></div>
+        <div class="mobile-nav-item"><a href="tel:904-749-5327" class="mobile-phone-link">&#9742; 904-749-5327</a></div>
         <div style="margin-top: 24px;"><a href="/contact" class="btn-primary" style="display: block; text-align: center;">Get Quote</a></div>
     </div>
 
-    <section class="hero" style="height: 50vh;">
+    <section class="hero" style="height: 50vh; background-image: url('/assets/images/portfolio/portfolio-driveway.jpg'); background-size: cover; background-position: center;">
         <div class="hero-overlay"></div>
-        <div class="hero-content">
+        <div class="hero-content" style="position: relative; z-index: 2; text-align: center;">
             <h1 class="hero-title">Our Work.</h1>
-            <p class="hero-subtitle">A gallery of exquisite outdoor transformations.</p>
+            <p class="hero-subtitle" style="margin: 0 auto;">Real projects. Real transformations. See what Caviar Pavers can do for your property.</p>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <div class="section-counter">01</div>
-            <div class="section-header">
-                <h2>Featured Projects.</h2>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="pavers">Pavers</button>
+                <button class="filter-btn" data-filter="pool-decks">Pool Decks</button>
+                <button class="filter-btn" data-filter="turf">Turf</button>
+                <button class="filter-btn" data-filter="screen-enclosures">Enclosures</button>
             </div>
 
-            <!-- Portfolio Grid (Masonry-ish) -->
-            <div class="image-stagger-grid" style="margin-top: 2rem;">
-                <div class="project-card">
-                    <img src="https://placehold.co/800x600/131E32/F4B41A?text=Luxury+Pool+Deck" alt="Pool Project">
-                    <h3 style="margin-top: 1rem;">Chatsworth Estate</h3>
-                    <p style="color: #666;">Pool Deck & Coping</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="pavers">
+                    <img src="/assets/images/portfolio/portfolio-driveway.jpg" alt="Paver Driveway Project">
+                    <div class="portfolio-item-overlay">
+                        <h3>Nocatee Estate</h3>
+                        <p>Paver Driveway & Patio</p>
+                    </div>
                 </div>
-                <div class="project-card" style="margin-top: 4rem;">
-                    <img src="https://placehold.co/800x1000/F4B41A/131E32?text=Driveway" alt="Driveway Project">
-                    <h3 style="margin-top: 1rem;">Calabasas Entryway</h3>
-                    <p style="color: #666;">Permeable Paver Driveway</p>
+                <div class="portfolio-item" data-category="pool-decks">
+                    <img src="/assets/images/portfolio/portfolio-pool-deck.jpg" alt="Pool Deck Project">
+                    <div class="portfolio-item-overlay">
+                        <h3>Amelia Island Resort</h3>
+                        <p>Travertine Pool Deck</p>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <img src="https://placehold.co/800x1000/333/FFF?text=Outdoor+Kitchen" alt="Kitchen Project">
-                    <h3 style="margin-top: 1rem;">Irvine Entertainment</h3>
-                    <p style="color: #666;">Outdoor Kitchen & Pergola</p>
+                <div class="portfolio-item" data-category="screen-enclosures">
+                    <img src="/assets/images/screens/screen-featured-project.jpg" alt="Screen Enclosure Project">
+                    <div class="portfolio-item-overlay">
+                        <h3>Ponte Vedra Oasis</h3>
+                        <p>Pool Screen Enclosure</p>
+                    </div>
                 </div>
-                <div class="project-card" style="margin-top: 4rem;">
-                    <img src="https://placehold.co/800x600/CCC/000?text=Patio" alt="Patio Project">
-                    <h3 style="margin-top: 1rem;">Beverly Hills Patio</h3>
-                    <p style="color: #666;">Travertine Paver Patio</p>
+                <div class="portfolio-item" data-category="turf">
+                    <img src="/assets/images/turf/turf-home-lawn.jpg" alt="Turf Project">
+                    <div class="portfolio-item-overlay">
+                        <h3>Sawgrass Estate</h3>
+                        <p>Premium Artificial Turf</p>
+                    </div>
                 </div>
+                <div class="portfolio-item" data-category="pavers">
+                    <img src="/assets/images/portfolio/portfolio-patio.jpg" alt="Paver Patio Project">
+                    <div class="portfolio-item-overlay">
+                        <h3>Riverside Retreat</h3>
+                        <p>Custom Paver Patio</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="pool-decks">
+                    <img src="/assets/images/pool-decks/pool-deck-luxury.jpg" alt="Waterfront Deck Project">
+                    <div class="portfolio-item-overlay">
+                        <h3>St. Augustine Waterfront</h3>
+                        <p>Oceanfront Pool Deck</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="pavers">
+                    <img src="/assets/images/pavers/pavers-luxury-patio.jpg" alt="Walkway Project">
+                    <div class="portfolio-item-overlay">
+                        <h3>Orange Park Residence</h3>
+                        <p>Brick Paver Walkway</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="screen-enclosures">
+                    <img src="/assets/images/portfolio/portfolio-outdoor-kitchen.jpg" alt="Lanai Enclosure Project">
+                    <div class="portfolio-item-overlay">
+                        <h3>Mandarin Lanai</h3>
+                        <p>Full Lanai Screen Enclosure</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="turf">
+                    <img src="/assets/images/turf/turf-golf.jpg" alt="Putting Green Project">
+                    <div class="portfolio-item-overlay">
+                        <h3>TPC Backyard</h3>
+                        <p>Custom Putting Green</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section cta-form-section">
+        <div class="container split-layout">
+            <div class="text-content">
+                <h2>Ready to Transform Your Space?</h2>
+                <p>Get a free consultation and see how we can elevate your property.</p>
+                <div style="margin-top: 2rem;">
+                    <p><strong>Phone:</strong> <a href="tel:904-749-5327" style="color: var(--gold-primary);">904-749-5327</a></p>
+                    <p><strong>Email:</strong> contact@caviarpavers.com</p>
+                </div>
+            </div>
+            <div class="hero-form-glass">
+                <h3 class="hero-form-title">Get Your Free Quote</h3>
+                <form class="hero-quote-form">
+                    <div class="hero-form-group"><input type="text" placeholder="Name" required></div>
+                    <div class="hero-form-group"><input type="tel" placeholder="Phone" required></div>
+                    <div class="hero-form-group"><input type="email" placeholder="Email" required></div>
+                    <div class="hero-form-group"><input type="text" placeholder="Project Address" required></div>
+                    <div class="hero-form-group">
+                        <select required>
+                            <option value="" disabled selected>Service Interested In</option>
+                            <option>Paver Patio</option>
+                            <option>Pool Deck</option>
+                            <option>Driveway</option>
+                            <option>Synthetic Turf</option>
+                            <option>Screen Enclosure</option>
+                            <option>Outdoor Kitchen</option>
+                        </select>
+                    </div>
+                    <div class="hero-form-group"><textarea placeholder="Message" rows="3"></textarea></div>
+                    <button type="submit" class="btn-primary hero-form-btn">Send Request</button>
+                </form>
             </div>
         </div>
     </section>

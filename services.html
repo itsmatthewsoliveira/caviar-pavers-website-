@@ -14,13 +14,13 @@
 
 <body>
 
-    <!-- Header -->
     <header class="header">
         <div class="container header-container">
             <div class="logo">
                 <a href="/"><img src="/assets/images/logo_dark.png" alt="Caviar Pavers"></a>
             </div>
             <nav class="nav-links">
+                <a href="/" class="nav-link">Home</a>
                 <div class="nav-item">
                     <a href="/services" class="nav-link active">Services <span class="dropdown-arrow">▼</span></a>
                     <div class="dropdown-menu">
@@ -39,12 +39,16 @@
                 <a href="/process" class="nav-link">Process</a>
                 <a href="/portfolio" class="nav-link">Portfolio</a>
             </nav>
-            <a href="/contact" class="btn-primary">Get Quote</a>
+            <div class="header-right">
+                <a href="tel:904-749-5327" class="header-phone"><span class="header-phone-icon">&#9742;</span><span>904-749-5327</span></a>
+                <a href="/contact" class="btn-primary">Get Quote</a>
+            </div>
             <button class="mobile-menu-btn" aria-label="Open Menu">☰</button>
         </div>
     </header>
     <div class="mobile-menu">
         <button class="mobile-menu-close" aria-label="Close Menu">✕</button>
+        <div class="mobile-nav-item"><a href="/" class="mobile-nav-link">Home</a></div>
         <div class="mobile-nav-item"><a href="#" class="mobile-nav-link" data-dropdown>Services <span class="dropdown-arrow">▼</span></a>
             <div class="mobile-dropdown">
                 <div class="mobile-dropdown-category"><div class="mobile-dropdown-title">Hardscaping</div><a href="/pavers" class="mobile-dropdown-item">Pavers & Driveways</a><a href="/pool-decks" class="mobile-dropdown-item">Pool Decks</a></div>
@@ -54,11 +58,12 @@
         <div class="mobile-nav-item"><a href="/process" class="mobile-nav-link">Process</a></div>
         <div class="mobile-nav-item"><a href="/portfolio" class="mobile-nav-link">Portfolio</a></div>
         <div class="mobile-nav-item"><a href="/contact" class="mobile-nav-link">Contact</a></div>
+        <div class="mobile-nav-item"><a href="tel:904-749-5327" class="mobile-phone-link">&#9742; 904-749-5327</a></div>
         <div style="margin-top: 24px;"><a href="/contact" class="btn-primary" style="display: block; text-align: center;">Get Quote</a></div>
     </div>
 
     <!-- Services Hero -->
-    <section class="hero" style="height: 60vh;">
+    <section class="hero" style="height: 60vh; background-image: url('/assets/images/home/hero-home.jpg'); background-size: cover; background-position: center;">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title">Our Expertise.</h1>
@@ -69,7 +74,6 @@
     <!-- Hardscaping Section -->
     <section class="section">
         <div class="container">
-            <div class="section-counter">01</div>
             <div class="section-header">
                 <h2>Hardscaping Mastery.</h2>
             </div>
@@ -92,16 +96,15 @@
                     </div>
                 </div>
                 <div class="image-content">
-                    <img src="https://placehold.co/600x600/131E32/F4B41A?text=Hardscaping" alt="Hardscaping Example">
+                    <img src="/assets/images/home/home-paver-driveway.jpg" alt="Hardscaping Example">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Outdoor Living Section (Dark) -->
-    <section class="section bg-blue text-white">
+    <section class="section section-alt">
         <div class="container">
-            <div class="section-counter text-white">02</div>
             <div class="section-header">
                 <h2 class="text-white">Outdoor Living.</h2>
             </div>
