@@ -1,33 +1,41 @@
 :root {
-    /* --- Primary Colors (Premium Dark) --- */
-    --navy-dark: #0F172A;
-    --navy-darker: #020617;
-    --navy-medium: #1E293B;
-    --gold-primary: #B8860B;
-    --gold-secondary: #996F0A;
-    --gold-light: #CDA434;
-    --gold-dark: #7A5A08;
+    /* --- Primary Colors (Brown Terra + Cream) --- */
+    --bg-primary: #0C0906;
+    --bg-secondary: #110E0A;
+    --bg-card: #161210;
+    --bg-card-hover: #1E1914;
+    --border-subtle: rgba(212, 175, 55, 0.08);
+    --border-accent: rgba(212, 175, 55, 0.25);
 
-    /* --- Bronze Accents --- */
-    --bronze-primary: #CD7F32;
-    --bronze-light: #D4956A;
-    --bronze-dark: #8B5A2B;
-    --bronze-deep: #6B4423;
+    /* --- Brown / Terra Cotta --- */
+    --brown-deep: #2A1F14;
+    --brown-medium: #3D2E1F;
+    --brown-warm: #5C3D2E;
+    --terra: #8B5E3C;
+    --terra-light: #A67C52;
 
-    /* --- Secondary Colors --- */
-    --white: #FFFFFF;
+    /* --- Luxury Gold (metallic, not yellow) --- */
+    --gold-primary: #D4AF37;
+    --gold-secondary: #BF9B30;
+    --gold-light: #E8C84A;
+    --gold-dark: #A67C00;
+    --gold-glow: rgba(212, 175, 55, 0.12);
+
+    /* --- Cream Accents --- */
+    --cream: #F5E6C8;
     --cream-light: #FDF6E3;
-    --cream-bg: #F8F6F0;
-    --text-navy: #0F172A;
+    --cream-muted: #D4C4A0;
 
-    /* --- Legacy Aliases (for compatibility) --- */
-    --color-primary-blue: #1C263F;
-    --color-accent-gold: #FFBC0D;
-    --color-white: #FFFFFF;
-    --color-off-white: #FAF9F5;
-    --color-text-dark: #1C263F;
-    --color-text-light: #FFFFFF;
-    --color-grey-light: #E5E7EB;
+    /* --- Legacy aliases --- */
+    --navy-dark: #0C0906;
+    --navy-darker: #0C0906;
+    --navy-medium: #161210;
+
+    /* --- Text --- */
+    --white: #FDF6E3;
+    --text-primary: #F5E6C8;
+    --text-secondary: rgba(245, 230, 200, 0.6);
+    --text-muted: rgba(245, 230, 200, 0.35);
 
     /* --- Typography --- */
     --font-heading: 'Poppins', sans-serif;
@@ -42,12 +50,18 @@
     --spacing-container: 5%;
 
     /* --- Border Radius --- */
-    --radius-sm: 6px;
-    --radius-md: 12px;
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 20px;
     --radius-pill: 100px;
 
     /* --- Transitions --- */
     --transition-fast: 0.3s ease;
+
+    /* --- Effects --- */
+    --glow-gold: 0 0 20px rgba(212, 175, 55, 0.15);
+    --gradient-gold-text: linear-gradient(135deg, #A67C00, #D4AF37, #E8C84A, #D4AF37, #A67C00);
+    --gradient-bg-radial: radial-gradient(ellipse at 20% 50%, rgba(139, 94, 60, 0.06) 0%, transparent 50%);
 }
 
 /* --- Reset --- */
@@ -59,40 +73,24 @@
 
 body {
     font-family: var(--font-body);
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
-    color: var(--white);
-    background-color: var(--navy-dark);
-    line-height: 1.35;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    line-height: 1.5;
     overflow-x: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    color: var(--white);
+    color: var(--text-primary);
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.15;
 }
 
-h1 {
-    font-size: 43px;
-    letter-spacing: -2.15px;
-}
-
-h2 {
-    font-size: 35px;
-    letter-spacing: -1.75px;
-}
-
-h3 {
-    font-size: 24px;
-    letter-spacing: -1.2px;
-}
+h1 { font-size: 48px; letter-spacing: -2px; }
+h2 { font-size: 38px; letter-spacing: -1.5px; }
+h3 { font-size: 24px; letter-spacing: -0.8px; }
 
 a {
     text-decoration: none;
@@ -109,74 +107,38 @@ img {
 /* --- Utilities --- */
 .container {
     padding: 0 var(--spacing-container);
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.text-gold {
+.text-gold { color: var(--gold-primary); }
+.text-white { color: var(--text-primary); }
+.text-muted { color: var(--text-secondary); }
+
+.bg-navy { background-color: var(--bg-primary); }
+.bg-navy-dark { background-color: var(--bg-primary); }
+
+/* --- Category Label (uppercase accent label above headings) --- */
+.category-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
     color: var(--gold-primary);
+    margin-bottom: 16px;
+    font-family: var(--font-body);
 }
 
-.text-white {
-    color: var(--white);
-}
-
-.text-navy {
-    color: var(--text-navy);
-}
-
-.bg-navy {
-    background-color: var(--navy-dark);
-}
-
-.bg-navy-dark {
-    background-color: var(--navy-darker);
-}
-
-.bg-cream {
-    background-color: var(--cream-bg);
-}
-
-/* --- Mobile Typography Overrides --- */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 32px;
-        letter-spacing: -1.5px;
-    }
-
-    h2 {
-        font-size: 26px;
-        letter-spacing: -1.2px;
-    }
-
-    h3 {
-        font-size: 20px;
-        letter-spacing: -0.8px;
-    }
-
-    .container {
-        padding: 0 4%;
-    }
-}
-
+/* --- Responsive Typography --- */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 36px;
-        letter-spacing: -1.8px;
-    }
-
-    h2 {
-        font-size: 30px;
-        letter-spacing: -1.5px;
-    }
-
-    h3 {
-        font-size: 22px;
-        letter-spacing: -1px;
-    }
+    h1 { font-size: 36px; letter-spacing: -1.5px; }
+    h2 { font-size: 30px; letter-spacing: -1.2px; }
+    h3 { font-size: 22px; letter-spacing: -0.8px; }
 }
 
-/* Legacy utilities */
-.bg-blue {
-    background-color: var(--navy-dark);
+@media (max-width: 480px) {
+    h1 { font-size: 30px; letter-spacing: -1.2px; }
+    h2 { font-size: 26px; letter-spacing: -1px; }
+    h3 { font-size: 20px; letter-spacing: -0.6px; }
+    .container { padding: 0 20px; }
 }
