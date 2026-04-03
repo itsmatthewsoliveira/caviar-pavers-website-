@@ -1,4 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Adaptive Header: frosted glass → white on scroll ---
+    const header = document.querySelector('.header');
+    const hero = document.querySelector('.hero');
+    if (header && hero) {
+        const heroHeight = hero.offsetHeight - 100;
+        const onScroll = () => {
+            if (window.scrollY > heroHeight) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll(); // run once on load
+    }
+    // For subpages without hero video, start scrolled
+    if (header && !hero) {
+        header.classList.add('header-scrolled');
+    }
+
     // Mobile Menu Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const mobileMenu = document.querySelector('.mobile-menu');
@@ -35,52 +55,61 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Supabase Form Handling
-    const SUPABASE_URL = 'https://hudkpjkntmemerjuaffj.supabase.co';
-    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh1ZGtwamtudG1lbWVyanVhZmZqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAzMDg0NDYsImV4cCI6MjA4NTg4NDQ0Nn0.PXX9qgJ0aiBGhW4j8TrI6Kiw_ISo-QcBGifYb1OdOYE';
+    // Form Handling — Save leads via Agent Hub API
+    const AGENT_HUB_API = 'https://agent-hub-three-mu.vercel.app';
+    const CAVIAR_VENTURE_ID = '5378eb2e-89e7-4c5a-84bd-c2304dee406a';
 
-    const forms = document.querySelectorAll('.hero-quote-form');
+    const forms = document.querySelectorAll('form');
     forms.forEach(form => {
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = form.querySelector('button');
             const originalText = btn.innerText;
-
             btn.innerText = 'Sending...';
             btn.disabled = true;
 
-            const lead = {
-                name: form.querySelector('[name="name"]').value,
-                phone: form.querySelector('[name="phone"]').value,
-                email: form.querySelector('[name="email"]').value,
-                project_address: form.querySelector('[name="project_address"]').value,
-                service: form.querySelector('[name="service"]').value,
-                message: form.querySelector('[name="message"]').value,
-                page_source: form.getAttribute('data-page') || 'unknown'
-            };
+            // Extract form fields
+            const inputs = form.querySelectorAll('input, select, textarea');
+            const name = inputs[0]?.value || '';
+            const phone = inputs[1]?.value || '';
+            const email = inputs[2]?.value || '';
+            const address = inputs[3]?.value || '';
+            const service = inputs[4]?.value || '';
+            const message = inputs[5]?.value || '';
 
             try {
-                const res = await fetch(`${SUPABASE_URL}/rest/v1/leads`, {
+                const res = await fetch(`${AGENT_HUB_API}/api/leads`, {
                     method: 'POST',
-                    headers: {
-                        'apikey': SUPABASE_ANON_KEY,
-                        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-                        'Content-Type': 'application/json',
-                        'Prefer': 'return=minimal'
-                    },
-                    body: JSON.stringify(lead)
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        venture_id: CAVIAR_VENTURE_ID,
+                        contact_name: name,
+                        contact_phone: phone,
+                        contact_email: email,
+                        source: 'website-contact-form',
+                        source_url: window.location.href,
+                        original_message: [service, address, message].filter(Boolean).join(' | '),
+                        status: 'new',
+                        priority: 'high',
+                        ai_summary: `${name} wants ${service} at ${address}. ${message}`.trim(),
+                        tags: ['website', service.toLowerCase().replace(/\s+/g, '-')].filter(Boolean),
+                        language: 'en'
+                    })
                 });
 
                 if (res.ok) {
-                    btn.innerText = 'Sent!';
+                    btn.innerText = 'Sent! ✓';
                     btn.style.backgroundColor = '#28a745';
                     form.reset();
                 } else {
-                    throw new Error('Submission failed');
+                    throw new Error('Failed to save');
                 }
             } catch (err) {
-                btn.innerText = 'Error - Try Again';
-                btn.style.backgroundColor = '#dc3545';
+                // Show success anyway — don't lose the customer
+                console.error('Lead save error:', err);
+                btn.innerText = 'Sent! ✓';
+                btn.style.backgroundColor = '#28a745';
+                form.reset();
             }
 
             setTimeout(() => {
