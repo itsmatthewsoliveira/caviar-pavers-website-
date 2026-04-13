@@ -1,37 +1,67 @@
 :root {
-    /* --- Primary Colors (Premium Dark) --- */
-    --navy-dark: #0F172A;
-    --navy-darker: #020617;
-    --navy-medium: #1E293B;
-    --gold-primary: #B8860B;
-    --gold-secondary: #996F0A;
-    --gold-light: #CDA434;
-    --gold-dark: #7A5A08;
+    /* --- Travis Scott Brown (cool, desaturated, smoky mocha) --- */
+    --brown-dark: #1A1412;
+    --brown-deeper: #0F0C0A;
+    --brown-medium: #3D332D;
+    --brown-light: #5A4E46;
+    --brown-muted: #7A6E64;
 
-    /* --- Bronze Accents --- */
+    /* --- Charcoal (modern contrast — DARKER) --- */
+    --charcoal: #141414;
+    --charcoal-light: #1E1E1E;
+    --charcoal-medium: #2A2A2A;
+    --charcoal-muted: #4A4A4A;
+
+    /* --- Bronze/Tan Accents (warm, subtle) --- */
+    --accent: #B8923A;
+    --accent-light: #D4B06A;
+    --accent-warm: #C4874D;
+    --accent-muted: #A89070;
+    --gold-primary: #B8923A;
+    --gold-secondary: #A6833A;
+    --gold-light: #D4B06A;
+    --gold-dark: #8B7035;
+
+    /* --- Bronze (legacy) --- */
     --bronze-primary: #CD7F32;
-    --bronze-light: #D4956A;
+    --bronze-light: #D4B896;
     --bronze-dark: #8B5A2B;
     --bronze-deep: #6B4423;
 
-    /* --- Secondary Colors --- */
+    /* --- Whites & Creams (dominant palette) --- */
     --white: #FFFFFF;
-    --cream-light: #FDF6E3;
-    --cream-bg: #F8F6F0;
-    --text-navy: #0F172A;
+    --off-white: #FAFAFA;
+    --cream-light: #F7F5F2;
+    --cream-bg: #F2EFEB;
+    --cream-warm: #EDE9E3;
+    --border-light: #DDD9D3;
 
-    /* --- Legacy Aliases (for compatibility) --- */
-    --color-primary-blue: #1C263F;
-    --color-accent-gold: #FFBC0D;
+    /* --- Text (high contrast) --- */
+    --text-dark: #111111;
+    --text-heading: #0A0A0A;
+    --text-body: #2D2D2D;
+    --text-muted: #6B6B6B;
+    --text-subtle: #999999;
+    --text-on-dark: #F5F5F5;
+    --text-on-dark-muted: rgba(255, 255, 255, 0.7);
+
+    /* --- Legacy Aliases (mapped to new palette) --- */
+    --navy-dark: #141414;
+    --navy-darker: #0F0C0A;
+    --navy-medium: #1E1E1E;
+    --color-primary-blue: #141414;
+    --color-accent-gold: #B8923A;
     --color-white: #FFFFFF;
-    --color-off-white: #FAF9F5;
-    --color-text-dark: #1C263F;
-    --color-text-light: #FFFFFF;
-    --color-grey-light: #E5E7EB;
+    --color-off-white: #FAFAFA;
+    --color-text-dark: #111111;
+    --color-text-light: #F5F5F5;
+    --color-grey-light: #DDD9D3;
+    --text-navy: #111111;
 
-    /* --- Typography --- */
-    --font-heading: 'Poppins', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    /* --- Typography (thick, modern, clean) --- */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+    --font-accent: 'Playfair Display', serif;
 
     /* --- Spacing --- */
     --spacing-xs: 0.5rem;
@@ -59,12 +89,14 @@
 
 body {
     font-family: var(--font-body);
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
-    color: var(--white);
-    background-color: var(--navy-dark);
-    line-height: 1.35;
+    color: var(--text-body);
+    background-color: var(--white);
+    line-height: 1.6;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -74,24 +106,28 @@ h4,
 h5,
 h6 {
     font-family: var(--font-heading);
-    color: var(--white);
-    font-weight: 700;
-    line-height: 1.2;
+    color: var(--text-heading);
+    font-weight: 800;
+    line-height: 1.1;
+    text-transform: none;
 }
 
 h1 {
-    font-size: 43px;
-    letter-spacing: -2.15px;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 900;
+    letter-spacing: -1.5px;
 }
 
 h2 {
-    font-size: 35px;
-    letter-spacing: -1.75px;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    letter-spacing: -1px;
 }
 
 h3 {
-    font-size: 24px;
-    letter-spacing: -1.2px;
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 a {

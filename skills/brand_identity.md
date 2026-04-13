@@ -1,6 +1,6 @@
 ---
 name: Brand Identity
-description: Guidelines for Caviar Pavers brand identity. Navy/Gold Palette, Poppins + Inter Fonts.
+description: Guidelines for Caviar Pavers brand identity. Brown/Gold Earthy Palette, Playfair Display + Montserrat Fonts.
 ---
 
 # Brand Identity: Caviar Pavers
@@ -12,33 +12,38 @@ description: Guidelines for Caviar Pavers brand identity. Navy/Gold Palette, Pop
 
 ## Visual Identity
 
-### Color Palette
-- **Primary Navy:** `#1C263F` - Main dark sections, headers, service cards
-- **Navy Darker:** `#070E2C` - Footer, darker sections
-- **Gold Primary:** `#FFBC0D` - CTA buttons, accents, highlights
-- **Gold Secondary:** `#FABB18` - Form buttons, hover states
-- **Cream Background:** `#FAF9F5` - Light section backgrounds
+### Color Palette (Earthy Marble)
+- **Chocolate Brown:** `#2C1810` - Main dark sections, headers, service cards
+- **Deep Brown:** `#160C06` - Footer, darkest sections
+- **Medium Brown:** `#5C4033` - Secondary dark elements
+- **Gold Primary:** `#C9A227` - CTA buttons, accents, highlights
+- **Gold Light:** `#E5C158` - Hover states, secondary gold
+- **Bronze Accent:** `#D4B896` - Subtle text accents
+- **Marble Cream:** `#F0E8DC` - Light section backgrounds
+- **Warm White:** `#FAF6F1` - Cream backgrounds
 - **White:** `#FFFFFF` - Text on dark, form backgrounds
 
 ### Typography
-- **Headings:** **Poppins** (700 weight)
-    - H1: 43px, letter-spacing: -2.15px
-    - H2: 35px, letter-spacing: -1.75px
-    - H3: 24px, letter-spacing: -1.2px
-- **Body:** **Inter** (400-600 weight)
+- **Headings:** **Playfair Display** (600 weight)
+    - H1: 48px, letter-spacing: -1px
+    - H2: 38px, letter-spacing: -0.5px
+    - H3: 26px, letter-spacing: -0.3px
+- **Body:** **Montserrat** (300-700 weight)
     - Body: 15px, line-height: 1.35
     - Nav: 16px, weight 600
 
 ### Buttons
-- **Primary CTA:** Gold pill shape (border-radius: 100px)
+- **Primary CTA:** Gold gradient rounded (border-radius: 8px)
 - **Form Submit:** Gold rounded rectangle (border-radius: 6px)
 
 ### Logo Usage
-- **Primary Logo:** `assets/images/logo_dark.png`
+- **Primary Logo:** `assets/images/logo-sturgeon.svg` (Sturgeon mark + CAVIAR PAVERS text)
 - **Pattern/Icon:** `assets/images/pattern_gold.png` (Sturgeon pattern for backgrounds)
 - Logo height in header: 80px
+- **Note:** Replace SVG with actual PNG logo files when available
 
 ## Brand Voice
-- **Tone:** Premium, Professional, Expert
+- **Tone:** Premium, Professional, Expert but Approachable
 - **Key Messages:** "We are experts elevating lives."
 - **Tagline:** "Elegance Meets Durability"
+- **Visual Style:** SoHo meets Tulum — warm, earthy luxury with marble/stone textures

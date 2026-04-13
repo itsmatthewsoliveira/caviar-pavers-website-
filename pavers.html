@@ -7,7 +7,7 @@
     <title>Pavers & Hardscaping | Caviar Pavers</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -18,7 +18,7 @@
     <header class="header">
         <div class="container header-container">
             <div class="logo">
-                <a href="/"><img src="/assets/images/logo_dark.png" alt="Caviar Pavers"></a>
+                <a href="/" class="logo-link"><img src="/assets/images/logo-sturgeon-new.png" alt="Caviar Pavers"><span class="logo-brand">CAVIAR<br>PAVERS</span></a>
             </div>
             <nav class="nav-links">
                 <a href="/" class="nav-link">Home</a>
@@ -63,11 +63,11 @@
         <div style="margin-top: 24px;"><a href="/contact" class="btn-primary" style="display: block; text-align: center;">Get Quote</a></div>
     </div>
 
-    <!-- Hero Section with Trust Badges -->
+    <!-- Hero Section with Quote Form -->
     <section class="hero service-hero" style="min-height: 80vh; background-image: url('/assets/images/pavers/pavers-hero.jpg'); background-size: cover; background-position: center;">
         <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="service-hero-content">
+        <div class="hero-split-container">
+            <div class="hero-content hero-content-left">
                 <div class="hero-badges">
                     <div class="hero-badge">
                         <span class="hero-badge-icon">✓</span>
@@ -84,7 +84,30 @@
                 </div>
                 <h1 class="hero-title">Stop Parking on <span class="text-emphasis">Cracked Concrete</span></h1>
                 <p class="hero-subtitle">High-end craftsmanship that transforms your outdoor spaces into works of art. Built to last 3x longer than concrete.</p>
-                <a href="contact.html" class="btn-primary" style="padding: 18px 36px; font-size: 16px;">Get Your Free Quote</a>
+            </div>
+            <div class="hero-form-container">
+                <div class="hero-form-glass">
+                    <h3 class="hero-form-title">Get Your Free Quote</h3>
+                    <p class="hero-form-subtitle">Tell us about your project</p>
+                    <form class="hero-quote-form">
+                        <div class="hero-form-group"><input type="text" placeholder="Name" required></div>
+                        <div class="hero-form-group"><input type="tel" placeholder="Phone" required></div>
+                        <div class="hero-form-group"><input type="email" placeholder="Email" required></div>
+                        <div class="hero-form-group"><input type="text" placeholder="Project Address" required></div>
+                        <div class="hero-form-group">
+                            <select required>
+                                <option value="" disabled selected>Service Interested In</option>
+                                <option selected>Paver Patio</option>
+                                <option>Pool Deck</option>
+                                <option>Driveway</option>
+                                <option>Synthetic Turf</option>
+                                <option>Screen Enclosure</option>
+                                <option>Outdoor Kitchen</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary hero-form-btn">Get Free Quote</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
