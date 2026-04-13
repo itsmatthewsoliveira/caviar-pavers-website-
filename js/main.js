@@ -55,10 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Form Handling — Save leads via Agent Hub API
-    const AGENT_HUB_API = 'https://agent-hub-three-mu.vercel.app';
-    const CAVIAR_VENTURE_ID = '5378eb2e-89e7-4c5a-84bd-c2304dee406a';
-
+    // Form Handling — Save leads to Notion (Agent Hub as fallback)
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
         form.addEventListener('submit', async (e) => {
@@ -78,22 +75,20 @@ document.addEventListener('DOMContentLoaded', () => {
             const message = inputs[5]?.value || '';
 
             try {
-                const res = await fetch(`${AGENT_HUB_API}/api/leads`, {
+                const res = await fetch('/api/leads', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        venture_id: CAVIAR_VENTURE_ID,
                         contact_name: name,
                         contact_phone: phone,
                         contact_email: email,
-                        source: 'website-contact-form',
                         source_url: window.location.href,
-                        original_message: [service, address, message].filter(Boolean).join(' | '),
-                        status: 'new',
-                        priority: 'high',
-                        ai_summary: `${name} wants ${service} at ${address}. ${message}`.trim(),
-                        tags: ['website', service.toLowerCase().replace(/\s+/g, '-')].filter(Boolean),
-                        language: 'en'
+                        service: service,
+                        address: address,
+                        message: message,
+                        status: 'New',
+                        priority: 'High',
+                        ai_summary: `${name} wants ${service} at ${address}. ${message}`.trim()
                     })
                 });
 
